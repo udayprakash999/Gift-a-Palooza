@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gift-a-Palooza</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="santa-claus.png" type="image/x-icon" />
+  </head>
+  <style>
+    h1 {
+      color: #ffffff;
+      text-shadow: 2px 2px 3px black;
+      font-size: 3em;
+      animation: bounce 1.5s ease infinite;
+    }
+   
+    .text {
+      font-size: 2em;
+      color: #ffd900;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px #888888;
+      animation: sparkle  1s linear infinite;
+    }
+    @keyframes bounce {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+    @keyframes sparkle {
+      0% {
+        text-shadow: 2px 2px 5px #888888, 0 0 10px #ffed8a, 0 0 20px #ffd900,
+          0 0 30px #000000;
+      }
+      100% {
+        text-shadow: 2px 2px 5px #888888, 0 0 10px #000000, 0 0 30px #ffed88,
+          0 0 40px #000000;
+      }
+    }
+  </style>
+  <body>
+    <!-- Snowflakes Container -->
+    <div id="snowflakes"></div>
+
+    <div>
+      <h1>🎅 Ho Ho Ho! Santa's Workshop is Open!🎄</h1>
+
+    </div>
+
+    <!-- Content -->
+    <div class="christmas-text">🎄 Merry Christmas! 🎁</div>
+    <p class="text">✨ What's under your tree this year? ✨</p>
+    <button onclick="showGift()">Tap to Unwrap Your Gift!</button>
+    <div id="gift" class="gift"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

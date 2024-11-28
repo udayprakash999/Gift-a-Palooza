@@ -1,0 +1,179 @@
+   /* General styling */
+   body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('https://images.unsplash.com/photo-1608889177592-e32e50c8b7d2') no-repeat center center/cover;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    position: relative;
+    animation: gradientBackground 10s infinite alternate;
+
+}
+
+
+  
+  @keyframes gradientBackground {
+    0% {
+      background: linear-gradient(120deg, #ffa0a4, #fad0c4);
+    }
+    25% {
+      background: linear-gradient(120deg, #bda8ee, #fbc2eb);
+    }
+    50% {
+      background: linear-gradient(120deg, #84fab0, #8fd3f4);
+    }
+    75% {
+      background: linear-gradient(120deg, #ffecd2, #fcb69f);
+    }
+    100% {
+      background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+    }
+  }
+
+/* Snowflakes */
+.snowflake {
+    position: fixed;
+    top: -10px;
+    color: white;
+    font-size: 1.5rem;
+    animation: fall linear infinite, sway ease-in-out infinite;
+    opacity: 0.8;
+}
+
+@keyframes fall {
+    0% {
+        top: -10%;
+    }
+    100% {
+        top: 110%;
+    }
+}
+
+@keyframes sway {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+}
+
+/* Merry Christmas text */
+.christmas-text {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 0, 0, 0.6), 0 0 30px rgba(0, 255, 0, 0.6);
+    animation: glow 2s infinite, bounce 2s infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 0, 0, 0.6), 0 0 30px rgba(0, 255, 0, 0.6);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 0, 0, 1), 0 0 40px rgba(0, 255, 0, 1);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Button styling */
+button {
+    margin-top: 20px;
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #d32f2f;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+    background-color: #b71c1c;
+}
+
+/* Gift box styling */
+.gift {
+    display: none;
+    margin-top: 20px;
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .christmas-text {
+        font-size: 2.5rem;
+    }
+
+    button {
+        padding: 10px 30px;
+        font-size: 1.2rem;
+    }
+
+    .gift {
+        font-size: 1.5rem;
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .christmas-text {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 8px 20px;
+        font-size: 1rem;
+    }
+
+    .gift {
+        font-size: 1.2rem;
+        padding: 10px 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+      }
+     
+      .text {
+        font-size: 1.3em;
+      }
+}
